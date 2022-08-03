@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/posts', \App\Http\Controllers\PostIndexController::class);
 Route::get('/posts/{post:slug}', \App\Http\Controllers\PostShowController::class);
+
+Route::get('/admin/posts/', \App\Http\Controllers\Admin\PostIndexController::class);
