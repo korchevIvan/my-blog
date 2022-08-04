@@ -23,3 +23,4 @@ Route::get('/posts/{post:slug}', \App\Http\Controllers\PostShowController::class
 
 Route::get('/admin/posts/', \App\Http\Controllers\Admin\PostIndexController::class);
 Route::post('/admin/posts/', \App\Http\Controllers\Admin\PostStoreController::class);
+Route::get('/admin/posts/{post:slug}/edit', \App\Http\Controllers\Admin\PostEditController::class);
