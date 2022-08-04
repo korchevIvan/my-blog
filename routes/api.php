@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/posts', \App\Http\Controllers\PostIndexController::class);
 Route::get('/posts/{post:slug}', \App\Http\Controllers\PostShowController::class);
 
-Route::get('/admin/posts/', \App\Http\Controllers\Admin\PostIndexController::class);
-Route::post('/admin/posts/', \App\Http\Controllers\Admin\PostStoreController::class);
+Route::get('/admin/posts', \App\Http\Controllers\Admin\PostIndexController::class);
+Route::post('/admin/posts', \App\Http\Controllers\Admin\PostStoreController::class);
 Route::get('/admin/posts/{post:slug}/edit', \App\Http\Controllers\Admin\PostEditController::class);
+Route::patch('/admin/posts/{post:uuid}', \App\Http\Controllers\Admin\PostPatchController::class);
