@@ -10,7 +10,7 @@ class PostShowController extends Controller
 {
     public function __invoke(Post $post)
     {
-        // autorize
+        $this->authorize('show', $post);
 
         return new PostResource($post);
     }
