@@ -25,3 +25,4 @@ Route::get('/admin/posts', \App\Http\Controllers\Admin\PostIndexController::clas
 Route::post('/admin/posts', \App\Http\Controllers\Admin\PostStoreController::class);
 Route::get('/admin/posts/{post:uuid}/edit', \App\Http\Controllers\Admin\PostEditController::class);
 Route::patch('/admin/posts/{post:uuid}', \App\Http\Controllers\Admin\PostPatchController::class);
+Route::delete('/admin/posts/{post:uuid}', \App\Http\Controllers\Admin\PostDestroyController::class);
